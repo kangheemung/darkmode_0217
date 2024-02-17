@@ -1,3 +1,3 @@
-import {createContent} from 'react'
+import { createContext } from 'react';
 
-export const ThemeContext = createContent(null);
+export const ThemeContext = createContext(null);
