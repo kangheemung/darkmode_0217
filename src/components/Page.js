@@ -1,16 +1,19 @@
-import React from 'react'
-import Header from './Header'
-import Content from './Content'
-import Footer from './Footer'
+import React from 'react';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
+// src/components/Page.js
 
-const Page = ({isDark, setIsDark})=> {
+
+const Page = () => {
+
   return (
     <div className="page">
-     <Header isDark={isDark} />
-     <Content isDark={isDark} />
-     <Footer isDark={isDark} setIsDark={setIsDark}/>
+      <Header />
+      <Content/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

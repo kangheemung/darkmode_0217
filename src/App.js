@@ -1,13 +1,16 @@
-
+import { useState } from 'react';
 import './App.css';
 import Page from './components/Page';
-import { useState } from 'react';
+import { ThemeContext } from './context/ThemeContext';  // Corrected path assuming `context` is inside `src`
 
 function App() {
-  const [isDark,setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
   return (
     <div className='App'>
-      <Page isDark={isDark} setIsDark={setIsDark}/>
+      <ThemeContext.Provider value = {{ isDark, setIsDark }}>
+        <Page />
+      </ThemeContext.Provider>
     </div>
   );
 }
